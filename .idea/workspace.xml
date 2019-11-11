@@ -2,8 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b73b4bf-02bf-4cee-a124-e5ecb0dcce2b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/custom_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/custom_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/icon_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/icon_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/music_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/music_non_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/music_non_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/music_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/pause_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/pause_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/play_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/play_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/retry2_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/retry2_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/retry_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/retry_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/return_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/return_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/setting_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/setting_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/sound_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/sound_non_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/sound_non_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/sound_normal.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -105,7 +127,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-87" />
     <option name="y" value="-16" />
     <option name="width" value="2578" />
@@ -172,15 +194,15 @@
       <option name="presentableId" value="Default" />
       <updated>1558628036379</updated>
       <workItem from="1558628037827" duration="4316000" />
-      <workItem from="1558756070550" duration="7945000" />
+      <workItem from="1558756070550" duration="8613000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12261000" />
+    <option name="totallyTimeSpent" value="12929000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="2578" height="1408" extended-state="7" />
+    <frame x="-9" y="-9" width="2578" height="1408" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19510269" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />

@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "gm": "^1.23.1"
+  },
+  "dependencies": {
+    "plist": "^3.0.1"
   }
 }
