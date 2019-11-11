@@ -3,7 +3,8 @@ SpriteSpliter 合图分割的小工具【nodejs】
 
 采用nodejs编写的用于合图分割的小工具,需要分割表文件.
 
-本工具分割表使用Texture Merger导出的json格式，可自行调整json结构或者工具使用
+本工具分割表使用Texture Merger导出的json格式和TexturePacker导出的plist格式文件【兼容format 1 & 2 & 3】~
+
 json文件格式如下：
 
 ```sh
@@ -12,20 +13,72 @@ json文件格式如下：
 "custom_down":{"x":230,"y":1,"w":96,"h":92,"offX":0,"offY":0,"sourceW":96,"sourceH":92}
 }
 ```
+plist文件格式如下【format 3】：
+
+```sh
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>0.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{17,19}</string>
+                <key>spriteSourceSize</key>
+                <string>{25,25}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{17,19}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA8888</string>
+            <key>premultiplyAlpha</key>
+            <false/>
+            <key>realTextureFileName</key>
+            <string>timer.png</string>
+            <key>size</key>
+            <string>{63,64}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:2700a4a2a1237330c975194e03f6b4bf:55d2c1b6f8efc174e53937c7178b2a01:33cdb2b0e2dffa2daf25ed89cc76fe4c$</string>
+            <key>textureFileName</key>
+            <string>timer.png</string>
+        </dict>
+    </dict>
+</plist>
+
+```
+
 ## 依赖库
 
 依赖gm库【需要安装ImageMagick】
+依赖plist库
 
 ```sh
-npm i gm -D
+npm i gm --save
+npm i plist --save
 ```
 
 ## 启动命令
 
-$ node app.js [json文件相对路径]
+$ node app.js [json文件相对路径|plist文件相对路径](ps.图集文件需要在同一目录)
 
 ```sh
 $ node app.js ./src/button.json
+
+$ node app.js ./src/timer.plist
+
 ```
 
 ## 关于其他
@@ -57,10 +110,14 @@ nodejs 使用 gm + get-pixels 库可以编写
 
 图片分割、PNG纹理合并一应俱全 [点击查看](https://www.fancynode.com.cn/bigshear)
 
-#### PIL + xml + dom 【python】(分割表要求：TexturePacker => plist)
+#### PIL + xml + dom 【python环境】(分割表要求：TexturePacker => plist)
 
 TexturePacker反向工具 [点击查看](https://www.cnblogs.com/BigFeng/p/4659261.html)
 
 ```sh
 上述工具方案要求对分割表文件有要求，按需调整
+```
+
+```sh
+-- 2019112 新增TexturePacker导出的plist格式文件【兼容format 1 & 2 & 3】
 ```
