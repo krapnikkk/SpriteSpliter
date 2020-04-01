@@ -76,29 +76,49 @@ async function getSpriteJson(path) {
     if (json && json['frames'] && json['file']) {
         frames = json['frames'];
         img_name = json['file'];
+    } else if (json && json['frames'] && json['images']) {
+        frames = json['frames'];
+        img_name = json['images'][0];
     } else {
         console.error('json文件结构不符合要求！');
         return;
     }
 
-    for (let item in frames) {
-        frame = frames[item]
-        output_name = item;
-        coordinate_x = frame['x'];
-        coordinate_y = frame['y'];
-        img_width = frame['w'];
-        img_height = frame['h'];
-        rotated = frames['rotated'];
-        img_arr.push({
-            'img_name': img_name,
-            'output_name': output_name,
-            "coordinate_x": coordinate_x,
-            "coordinate_y": coordinate_y,
-            "img_width": img_width,
-            "img_height": img_height,
-            "rotated": rotated,
-        });
+    console.log(img_name);
+
+    if (frames instanceof Array) {
+        frames.forEach((frame,index) => {
+            img_arr.push({
+                'img_name': img_name,
+                'output_name': index,
+                "coordinate_x": frame[0],
+                "coordinate_y": frame[1],
+                "img_width": frame[2],
+                "img_height": frame[3],
+                "rotated": false,
+            });
+        })
+    } else {
+        for (let item in frames) {
+            frame = frames[item]
+            output_name = item;
+            coordinate_x = frame['x'];
+            coordinate_y = frame['y'];
+            img_width = frame['w'];
+            img_height = frame['h'];
+            rotated = frames['rotated'];
+            img_arr.push({
+                'img_name': img_name,
+                'output_name': output_name,
+                "coordinate_x": coordinate_x,
+                "coordinate_y": coordinate_y,
+                "img_width": img_width,
+                "img_height": img_height,
+                "rotated": rotated,
+            });
+        }
     }
+
     maxSplitIdx = img_arr.length;
     for (let i = 0; i < maxSplitIdx; i++) {
         let img = img_arr[i];
