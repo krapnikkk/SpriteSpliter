@@ -93,7 +93,7 @@ $ node app.js ./src/loading_atlas_P_.json
 
 在写这个工具之前搜索了相关的其他大图分图工具，分别如下：
 
-###检测透明像素矩阵切割工具
+### 检测透明像素矩阵切割工具
 
 #### Sprite Editor【Unity3D】
 
@@ -112,7 +112,7 @@ nodejs 使用 gm + get-pixels 库可以编写
 ```
 
 
-###根据分割表工具裁剪
+### 根据分割表工具裁剪
 
 #### BigShear
 
